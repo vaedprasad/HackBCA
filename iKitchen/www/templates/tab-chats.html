@@ -1,10 +1,8 @@
 <ion-view view-title="Add Item">
   <ion-content>
         <h2>Add Item</h2>
-        <ion-content ng-controller = "BCScannerController">
-        <button class = "button button-positive" ng-click = "cordovaBarcodeScanner.scan()">
-          Scan Barcode
-        </button>
-      </ion-content>
+      <ion-content ng-controllers="ExampleController">
+        <button class="button" ng-click="scanBarcode()"->Scan</button>
+    </ion-content>
   </ion-content>
 </ion-view>

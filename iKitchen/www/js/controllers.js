@@ -27,32 +27,20 @@ angular.module('starter.controllers', [])
   };
 });
 module.controller('BarcodeCtrl', function($scope, $cordovaBarcodeScanner) {
-
   document.addEventListener("deviceready", function () {
-
-    $cordovaBarcodeScanner
-      .scan()
-      .then(function(barcodeData) {
+  $scope.scanBarcode = function(){
+    
+    $cordovaBarcodeScanner.scan().then(function(imageData) {
         // Success! Barcode data is here
         var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "https://api.nutritionix.com/v1_1/item?upc="+barcodeData+"&appId=97003986&appKey=49840d98086fbae2db6bd9183dd6de14",true);
+        xhttp.open("GET", "https://api.nutritionix.com/v1_1/item?upc="+imageData.text+"&appId=97003986&appKey=49840d98086fbae2db6bd9183dd6de14",true);
         xhttp.send();
         xmlNutrition = xhttp.responseXML;
       }, function(error) {
         // An error occurred
+        console.log("an error happend " + error);
       });
-
-
-    // NOTE: encoding not functioning yet
-    $cordovaBarcodeScanner
-      .encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.nytimes.com")
-      .then(function(success) {
-        // Success!
-      }, function(error) {
-        // An error occurred
-      });
-
-  }, false);
+  }, false)
 });
 
 /*.controller("BarcodeCtrl", function($scope, $cordovaBarcodeScanner) {
