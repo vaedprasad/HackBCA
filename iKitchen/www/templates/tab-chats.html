@@ -1,13 +1,10 @@
 <ion-view view-title="Add Item">
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
         <h2>Add Item</h2>
-        <ion-option-button class="button-assertive" ng-click="scanBarcode()">
+        <ion-content ng-controller = "BCScannerController">
+        <button class = "button button-positive" ng-click = "cordovaBarcodeScanner.scan()">
           Scan Barcode
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
+        </button>
+      </ion-content>
   </ion-content>
 </ion-view>

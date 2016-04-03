@@ -34,6 +34,10 @@ module.controller('BarcodeCtrl', function($scope, $cordovaBarcodeScanner) {
       .scan()
       .then(function(barcodeData) {
         // Success! Barcode data is here
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "https://api.nutritionix.com/v1_1/item?upc="+barcodeData+"&appId=97003986&appKey=49840d98086fbae2db6bd9183dd6de14",true);
+        xhttp.send();
+        xmlNutrition = xhttp.responseXML;
       }, function(error) {
         // An error occurred
       });
