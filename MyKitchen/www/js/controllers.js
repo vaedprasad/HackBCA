@@ -1,6 +1,6 @@
 //the file for controller objects (Angular JS)
 
-angular.module('starter', ['ionic', 'ngCordova'])
+var app = angular.module('starter', ['ionic', 'ngCordova'])
 
 .controller("BCScannerController", function($scope, $cordovaBarcodeScanner) {
 	 
