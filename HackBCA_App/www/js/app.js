@@ -23,6 +23,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -155,5 +156,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 });
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of cec8d65... Preliminary Tabs
 =======
 >>>>>>> parent of cec8d65... Preliminary Tabs
