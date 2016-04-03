@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ionic', 'ngCordova'])
+angular.module('starter.controllers', [])
 
 .controller('ScanItemCtrl', function($scope) {})
 
@@ -27,7 +27,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
   };
 });
 
-.controller("BarcodeCtrl", function($scope, $cordovaBarcodeScanner) {
+/*.controller("BarcodeCtrl", function($scope, $cordovaBarcodeScanner) {
    
     $scope.scanBarcode = function() {
       $cordovaBarcodeScanner.scan().then(function(imageData) {
@@ -39,4 +39,4 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
       });
     };
    
-  });
+  });*/
