@@ -1,8 +1,14 @@
 //the file for controller objects (Angular JS)
 
-var app = angular.module('starter', ['ionic', 'ngCordova'])
+var app = angular.module('MyKitchen.controllers', ['ionic', 'ngCordova'])
 
-.controller("BCScannerController", function($scope, $cordovaBarcodeScanner) {
+.controller('ItemScannerCtrl', function($scope) {})
+
+.controller('InventoryCtrl', function($scope) {})
+
+.controller('PersonalCtrl', function($scope) {});
+
+.controller("BCScannerCtrl", function($scope, $cordovaBarcodeScanner) {
 	 
 		$scope.scanBarcode = function() {
 			$cordovaBarcodeScanner.scan().then(function(imageData) {
@@ -14,4 +20,4 @@ var app = angular.module('starter', ['ionic', 'ngCordova'])
 			});
 		};
 	 
-	});
+});
