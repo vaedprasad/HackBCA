@@ -1,6 +1,6 @@
 //main application javascript stuff
 
-angular.module('starter', ['ionic', 'ngCordova','MyKitchen.controllers', 'MyKitchen.services'])
+var app = angular.module('starter', ['ionic', 'ngCordova','MyKitchen.controllers', 'MyKitchen.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
