@@ -1,0 +1,22 @@
+<ion-view view-title="Home">
+	<ion-content class="padding">
+		
+		<div class="list card">
+			<li class="item item-divider">
+				Your following friends are free now:
+  			</li>
+
+			<a ng-repeat="friend in user.friends" href="#" class="item">
+				{{ friend.name }}
+			</a>
+		</div>
+
+		<h2>Alerts</h2>
+		<div ng-repeat="alert in alerts" class="card">
+			<div class="item item-text-wrap">
+				{{ alert }}
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

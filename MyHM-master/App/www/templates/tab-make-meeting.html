@@ -1,0 +1,43 @@
+<ion-view view-title="New Meeting">
+	<ion-content class="padding">
+		<div class="list list-inset">
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input ng-model="query" placeholder="Search" type="text">
+			</label>
+		</div>
+
+		<div class="list list-inset">
+
+			<div ng-repeat="header in headings">
+				<div class="item item-divider">
+					{{ header.name }}
+				</div>
+
+				<div ng-repeat="person in header.people | filter:person.isChecked | filter:query" class="item item-checkbox">
+					<label class="checkbox">
+						<input ng-checked="person.isChecked" ng-model="person.isChecked" type="checkbox">
+					</label>
+					{{ person.name }}
+				</div>
+			</div>
+		</div>
+
+		<div class="list card">
+
+			<div class="item item-divider">
+				Shared Frees
+			</div>
+
+			<a href="#" class="item item-button-right">
+				<button ng-click="makeMeeting()" class="button button-positive">Request</button>
+				C period, Today
+			</a>
+			<a href="#" class="item item-button-right">
+				<button ng-click="makeMeeting()" class="button button-positive">Request</button>
+				H period, Today
+			</a>
+		</div>
+
+	</ion-content>
+</ion-view>

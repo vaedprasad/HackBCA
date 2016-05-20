@@ -1,0 +1,26 @@
+<ion-view view-title="Meetings">
+	<ion-content class="padding">
+		<a class="button button-block button-positive" href="#/tab/make-meeting">
+			Make Meeting
+		</a>
+
+		<div class="list card">
+			<div class="item item-text-wrap">
+				Mr. Truell has requested to meet <b>D Period, Monday</b>.
+			</div>
+			<a ng-click="acceptMeeting()" class="item balanced acceptor" href="#">
+          		Accept
+        	</a>
+        	<a class="item assertive acceptor" href="#">
+        		Reject
+        	</a>
+		</div>
+
+		<div ng-repeat="meeting in user.meetings" class="card">
+			<div class="item item-text-wrap">
+				<b>{{ periodString(meeting.day, meeting.index) }}:</b> Meeting with {{ peopleString(meeting.people) }}
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>
